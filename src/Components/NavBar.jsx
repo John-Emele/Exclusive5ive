@@ -267,16 +267,22 @@ function NavBar() {
                             <VscCollectionSmall className="text-red-800 text-3xl" />
                             Collections
                         </NavLink>
-                        <NavLink to="/about" onClick={() => {
+                        <NavLink to="/about" className={({ isActive }) =>
+                            isActive ? "block text-black p-2  mb-5 flex  items-center gap-1 bg-white font-bold" :
+                                "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
+                            <MdContactSupport className="text-red-800 text-3xl" />
+                            About
+                        </NavLink>
+                        {/* <NavLink to="/about" onClick={() => {
                             setText(dark_text(true)
                             );
                             console.log(dark_text);
                         }} className={({ isActive }) =>
                             isActive ? "block text-black p-2  flex  items-center gap-1 mb-5 bg-white font-bold" :
                                 "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
-                            <MdContactSupport className="text-red-800 text-3xl" />
+                            < className="text-red-800 text-3xl" />
                             About Us
-                        </NavLink>
+                        </NavLink> */}
                         <NavLink to="/contact" className={({ isActive }) =>
                             isActive ? "block text-black p-2 flex  items-center gap-1 mb-5 bg-white font-bold" :
                                 "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
@@ -285,7 +291,7 @@ function NavBar() {
                         </NavLink>
                     </ul>
                     <div className="">
-                        {
+                        {/* {
                             navLinks.lenght ? list.map((li) => (
                                 <NavLink to={`/${li}`} className={({ isActive }) =>
                                     isActive ? "text-red-700 p-2 border-b border-b border-b-2 border-b-red-700 font-bold" :
@@ -293,7 +299,7 @@ function NavBar() {
                                     {li}
                                 </NavLink>
                             )) : null
-                        }
+                        } */}
                         <NavLink to="/search" className={({ isActive }) =>
                             isActive ? "block text-black p-2  mb-5 bg-white font-bold" :
                                 "block text-lg font-medium mb-3 hover:text-red-700 text-white text-gray-900 p-2"}>

@@ -393,7 +393,7 @@ function Body() {
                         }}
                         className="bg-white  
                         rounded-t-[25px]
-                        h-[80dvh] 
+                        h-[100dvh] 
                         pb-[env(safe-area-inset-bottom)]
                         absolute bottom-0 top-[60%] right-0 left-0
                         overflow-y-auto
