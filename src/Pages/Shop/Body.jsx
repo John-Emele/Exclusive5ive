@@ -379,6 +379,7 @@ function Body() {
             bg-black/30
             
             
+            
         ">
                     <div
                         onPointerDown={handlePointerDown}
@@ -393,9 +394,9 @@ function Body() {
                         }}
                         className="bg-white  
                         rounded-t-[25px]
-                        h-[100dvh] 
+                         
                         pb-[env(safe-area-inset-bottom)]
-                        absolute bottom-0 top-[60%] right-0 left-0
+                        absolute bottom-0 top-[50%] right-0 left-0
                         overflow-y-auto
                         touch-none
                         select-none">

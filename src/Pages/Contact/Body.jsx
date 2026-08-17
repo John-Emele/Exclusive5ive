@@ -17,10 +17,10 @@ import { GrLocation } from "react-icons/gr";
 
 
 function Body() {
-    const [user_name, setUserName] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
+    const [user_name, setUserName] = useState(null);
+    const [email, setEmail] = useState(null);
+    const [subject, setSubject] = useState(null);
+    const [message, setMessage] = useState(null);
     const [error, setError] = useState(false);
 
     return (
@@ -84,7 +84,7 @@ function Body() {
                     <div className="form-group">
                         <input type="text" className="border border-gray-200 w-full h-10 rounded-[5px] bg-whitetext-gray-red-600 "  value={email} 
                         onChange={(e) => {
-                          setEmail(e.target)
+                          setEmail(e.target.value)
                         }}
                         required
                         />
@@ -98,7 +98,7 @@ function Body() {
                     <div className="form-group">
                         <input type="text" className="border border-gray-200 w-full h-10 rounded-[5px] bg-whitetext-gray-red-600 "  value={subject} 
                         onChange={(e) => {
-                          setSubject(e.target)
+                          setSubject(e.target.value)
                         }}
                         required
                         />
@@ -112,7 +112,7 @@ function Body() {
                     <div className="form-group">
                         <textarea className="border border-gray-200 w-full h-30 rounded-[5px] bg-whitetext-gray-red-600 "  value={message} 
                         onChange={(e) => {
-                          setMessage(e.target)
+                          setMessage(e.target.value)
                         }}
                         required
                         />
