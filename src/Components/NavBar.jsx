@@ -6,6 +6,7 @@ import { GoHeart } from "react-icons/go";
 import { TiShoppingCart } from "react-icons/ti";
 import { GoHome } from "react-icons/go";
 import { FaBagShopping } from "react-icons/fa6";
+import { HiInformationCircle } from "react-icons/hi";
 import { FcAbout } from "react-icons/fc";
 import { VscCollectionSmall } from "react-icons/vsc";
 import { MdContactSupport } from "react-icons/md";
@@ -142,9 +143,9 @@ function NavBar() {
                         <span className="md:text-4xl text-3xl">E</span>xclusive<span className="text-red-600 font-bold md:text-3xl text-2xl" > 5ive</span>
                     </h2>
 
-                    <GrMenu className={`${page !== "" ? "text-black" : "text-white"} text-4xl lg:hidden`}  onClick={() => {
+                    <GrMenu className={`${page !== "" ? "text-black" : "text-white"} text-4xl lg:hidden`} onClick={() => {
                         setToggle(!toggle);
-                    }}/>
+                    }} />
 
                     <ul className="lg:flex gap-4 items-center hidden">
 
@@ -158,27 +159,6 @@ function NavBar() {
                                 </NavLink>
                             ))
                         }
-
-                        {/* <NavLink to="/shop" className={({ isActive }) =>
-                            isActive ? "text-red-700 border-b border-b-2 border-b-red-600  p-2 font-bold" :
-                                " font-medium text-white hover:text-red-700 text-lg text-gray-900 p-2"}>
-                            <li></li>Shop
-                        </NavLink>
-                        <NavLink to="/collections" className={({ isActive }) =>
-                            isActive ? "text-red-700 border-b border-b-2 border-b-red-600  p-2 font-bold" :
-                                " font-medium text-white hover:text-red-700 text-lg text-gray-900 p-2"}>
-                            <li></li>Collections
-                        </NavLink>
-                        <NavLink to="/about" className={({ isActive }) =>
-                            isActive ? "text-red-700 border-b border-b-2 border-b-red-600  p-2 font-bold" :
-                                " font-medium text-white hover:text-red-700 text-lg text-gray-900 p-2"}>
-                            <li></li>About Us
-                        </NavLink>
-                        <NavLink to="/contact" className={({ isActive }) =>
-                            isActive ? "text-red-700 border-b border-b-2 border-b-red-600  p-2 font-bold" :
-                                "text-lg font-medium text-white hover:text-red-700 text-gray-900 p-2"}>
-                            <li></li>Contact
-                        </NavLink> */}
                     </ul>
 
                     <div className="lg:flex items-center  gap-5 hidden">
@@ -228,33 +208,17 @@ function NavBar() {
                 </nav>
             </div>
 
-           
-             <div className="lg:hidden">
+
+            <div className="lg:hidden">
                 {/* <MdCancel className="text-white text-3xl  top-1 right-5 absolute" /> */}
                 <div className={`lg:hidden side-menu overflow-y-auto right-side pt-10 pb-10 fixed left-0 topo-0 bottom-0 right-[20%] rounded-e-[20px]  h-dvh z-1000 bg-black/90  ${toggle ? "show" : ""}`}>
-
-
                     <ul className=" ">
-                        {/* <li className="w-[90%] mx-auto">
-                            <NavLink
-                                to="/"
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? "block p-2 bg-[#6C63FF] text-center text-purple-900 font-bold rounded-[10px] mb-3 text-sm flex gap-2 items-center"
-                                        : "block p-2 text-white text-center font-bold rounded-[10px] hover:bg-slate-700 mb-3 flex gap-2 text-sm items-center"
-                                }
-                            >
-                                Home
-                            </NavLink>
-                        </li> */}
-                        <li className=" mx-auto">
-                            <NavLink to="/" className={({ isActive }) =>
-                                isActive ? "block text-black p-2 flex  items-center gap-1 mb-5 bg-white font-bold" :
-                                    "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
-                                <GoHome className="text-red-800 text-3xl" />
-                                Home
-                            </NavLink>
-                        </li>
+                        <NavLink to="/" className={({ isActive }) =>
+                            isActive ? "block text-black p-2 flex  items-center gap-1 mb-5 bg-white font-bold" :
+                                "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
+                            <GoHome className="text-red-800 text-3xl" />
+                            Home
+                        </NavLink>
                         <NavLink to="/shop" className={({ isActive }) =>
                             isActive ? "block text-black p-2 flex  items-center gap-1 mb-5 bg-white font-bold" :
                                 "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
@@ -270,19 +234,9 @@ function NavBar() {
                         <NavLink to="/about" className={({ isActive }) =>
                             isActive ? "block text-black p-2  mb-5 flex  items-center gap-1 bg-white font-bold" :
                                 "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
-                            <MdContactSupport className="text-red-800 text-3xl" />
+                            <HiInformationCircle className="text-red-800 text-3xl" />
                             About
                         </NavLink>
-                        {/* <NavLink to="/about" onClick={() => {
-                            setText(dark_text(true)
-                            );
-                            console.log(dark_text);
-                        }} className={({ isActive }) =>
-                            isActive ? "block text-black p-2  flex  items-center gap-1 mb-5 bg-white font-bold" :
-                                "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
-                            < className="text-red-800 text-3xl" />
-                            About Us
-                        </NavLink> */}
                         <NavLink to="/contact" className={({ isActive }) =>
                             isActive ? "block text-black p-2 flex  items-center gap-1 mb-5 bg-white font-bold" :
                                 "block text-lg font-medium mb-3 flex  items-center gap-1 hover:text-red-700 text-white text-gray-900 p-2"}>
@@ -291,15 +245,6 @@ function NavBar() {
                         </NavLink>
                     </ul>
                     <div className="">
-                        {/* {
-                            navLinks.lenght ? list.map((li) => (
-                                <NavLink to={`/${li}`} className={({ isActive }) =>
-                                    isActive ? "text-red-700 p-2 border-b border-b border-b-2 border-b-red-700 font-bold" :
-                                        "text-lg font-medium hover:text-red-700 text-white text-gray-900 p-2"}>
-                                    {li}
-                                </NavLink>
-                            )) : null
-                        } */}
                         <NavLink to="/search" className={({ isActive }) =>
                             isActive ? "block text-black p-2  mb-5 bg-white font-bold" :
                                 "block text-lg font-medium mb-3 hover:text-red-700 text-white text-gray-900 p-2"}>
@@ -335,18 +280,11 @@ function NavBar() {
                                 <p className="text-xl">Profile</p>
                             </div>
                         </NavLink>
-                        <div className="relative">
-                            {/* < className="text-white text-3xl" /> */}
-                            {/* <div className="w-5 h-5 absolute top-[-8px] left-3 pb-1  rounded-full ">
-                                <p className="text-xs text-white pb-3 font-medium w-full text-center">10</p>
-                            </div> */}
-                        </div>
 
-                        {/* <TiShoppingCart className="text-white text-xl" /> */}
-                        {/* <LuSearch /> */}
+                        
                     </div>
                 </div>
-            </div> 
+            </div>
         </>
 
     );
